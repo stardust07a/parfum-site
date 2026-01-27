@@ -17,7 +17,10 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-
+html, body, #root{
+  min-height: 100%;
+  background: linear-gradient(180deg, #efe9dc, #e6e1d6);
+}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

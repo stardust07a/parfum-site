@@ -1,0 +1,69 @@
+/* perfume.css — theme.css'ten sonra yüklensin */
+
+/* 1) Genel renk dili: warm ivory + amber gold + premium siyah */
+:root{
+  --bg:#fbf7f1;        /* krem/ivory */
+  --text:#0f0f10;      /* premium siyah */
+  --muted:#6b6257;     /* sıcak gri */
+  --line:#eadfd1;      /* yumuşak çizgi */
+  --card: rgba(255,255,255,.88);
+  --radius: 20px;
+  --accent:#b88a3b;    /* amber/gold */
+  --shadow: 0 18px 45px rgba(15,10,6,.12);
+}
+
+/* 2) Sayfa arka planı: parfüm vitrini gibi yumuşak ışık */
+body{
+  background:
+    radial-gradient(900px 520px at 18% 0%, rgba(184,138,59,.14), transparent 60%),
+    radial-gradient(760px 460px at 85% 10%, rgba(0,0,0,.06), transparent 55%),
+    var(--bg);
+}
+
+/* 3) Hero: pembe yerine amber ışık */
+.hero{
+  background:
+    radial-gradient(1200px 480px at 10% 0%, rgba(184,138,59,.16), transparent 60%),
+    radial-gradient(820px 420px at 90% 10%, rgba(0,0,0,.10), transparent 55%),
+    linear-gradient(135deg, rgba(255,255,255,.92), rgba(255,255,255,.70));
+  border-color: rgba(0,0,0,.06);
+}
+
+/* 4) Kartlar: cam/premium hissi */
+.card{
+  background: rgba(255,255,255,.86);
+  border-color: rgba(0,0,0,.08);
+  backdrop-filter: blur(8px);
+}
+
+/* 5) Butonlar: biraz daha “parfüm” (daha köşeli, daha premium) */
+.btn, .btn-ghost{
+  border-radius: 14px;  /* senin theme’de 999px çok “sportif” duruyor */
+  letter-spacing: .01em;
+}
+.btn{
+  background: var(--text);
+  border-color: var(--text);
+}
+.btn-ghost{
+  background: rgba(255,255,255,.8);
+}
+
+/* 6) Badge: notalar/EDP/EDT için daha şık */
+.badge{
+  background: rgba(255,255,255,.82);
+  border-color: rgba(0,0,0,.08);
+  color: var(--muted);
+}
+
+/* 7) Ürün görsel alanı: pembe degrade yerine amber ışık */
+.prod-img{
+  background:
+    radial-gradient(circle at 30% 25%, rgba(184,138,59,.20), transparent 58%),
+    linear-gradient(135deg, rgba(0,0,0,.03), rgba(0,0,0,.02));
+}
+
+/* 8) Focus efekti: pembe glow yerine amber glow */
+input:focus, textarea:focus, select:focus{
+  box-shadow: 0 0 0 4px rgba(184,138,59,.16);
+}
